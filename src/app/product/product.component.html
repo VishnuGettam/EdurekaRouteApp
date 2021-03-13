@@ -1,1 +1,25 @@
-    <p style="text-align: center;  color: coral;" >Product Component</p>
+<h2 style="text-align: center">Products List</h2>
+<table class="table" border="1">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productsList">
+      <td>
+        {{ product.Name }}
+      </td>
+      <td>
+        {{ product.Price | currency:'INR' }}
+      </td>
+      <td>
+        <button class="btn-primary" (click)="NavigatetoProduct(product.Id)"  >
+          View Details
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+<div style="border: 0.5px solid silver;">
+<div class="row">
+  <div class="col">
+    Name : {{ProductDetails.Name}}
+    <br>
+    Description : {{ProductDetails.Description}}
+    <br>
+    Price : {{ProductDetails.Price | currency:'INR'}}
+  </div>
+  <div class="col">
+    <img [src]="ProductDetails.ImgUrl" alt="">
+  </div>
+</div>
+<div >
+  <a  class="anchor" (click)="GotoProductList()" style="cursor: pointer;">GotoProductList</a>
+</div>
+</div>
